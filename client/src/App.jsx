@@ -1,14 +1,13 @@
-import { useState } from "react"
-import Wallet from "./components/Wallet/Wallet"
-import Navigation from "./components/Navigation/Navigation"
-import DisplayPannel from './components/Display Pannel/DisplayPannel'
-import TokenApproval from './components/StakeToken/TokenApproval'
-import StakeAmount from './components/StakeToken/StakeAmount'
-import WithdrawStakeAmount from './components/Withdraw/Withdraw'
-import { StakingProvider } from './context/StakingContext'
-import './App.css'
+import { useState } from "react";
+import Wallet from "./components/Wallet/Wallet";
+import Navigation from "./components/Navigation/Navigation";
+import DisplayPannel from "./components/Display Pannel/DisplayPannel";
+import TokenApproval from "./components/StakeToken/TokenApproval";
+import StakeAmount from "./components/StakeToken/StakeAmount";
+import WithdrawStakeAmount from "./components/Withdraw/Withdraw";
+import { StakingProvider } from "./context/StakingContext";
+import "./App.css";
 function App() {
-
   const [displaySection, setDisplaySection] = useState("stake");
 
   const handleButtonClick = (section) => {
@@ -27,7 +26,7 @@ function App() {
                 onClick={() => handleButtonClick("stake")}
                 className={displaySection === "stake" ? "" : "active"}
               >
-                Stake
+                Lend
               </button>
               <button
                 onClick={() => handleButtonClick("withdraw")}
@@ -51,7 +50,7 @@ function App() {
         </StakingProvider>
       </Wallet>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
